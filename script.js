@@ -2729,3 +2729,47 @@ document.getElementById("messageBtn").addEventListener("click", function () {
     updateHomeProfile(getSavedProfile());
 
 })(); 
+
+// =====================================================
+// AUTHENTICATION & LOGOUT CONTROLS
+// =====================================================
+(function() {
+    function handleLogout(e) {
+        if (e) e.preventDefault();
+        if (confirm("Are you sure you want to log out of ProjectHub?")) {
+            localStorage.removeItem("token");
+            localStorage.removeItem("ph_current_user");
+            window.location.replace("login.html");
+        }
+    }
+
+    const logoutBtn = document.getElementById("logoutBtn");
+    if (logoutBtn) logoutBtn.addEventListener("click", handleLogout);
+
+    const mobileLogoutBtn = document.getElementById("mobileLogoutBtn");
+    if (mobileLogoutBtn) mobileLogoutBtn.addEventListener("click", handleLogout);
+
+    // Sync logged-in user name to the home profile card if available
+    try {
+        const currentUser = JSON.parse(localStorage.getItem("ph_current_user") || "null");
+        if (currentUser && currentUser.name) {
+            const profileCard = document.querySelector(".card.profile");
+            if (profileCard) {
+                const nameEl = profileCard.querySelector("h2");
+                if (nameEl) {
+                    nameEl.textContent = currentUser.name;
+                }
+                const avatarEl = profileCard.querySelector(".profile-avatar");
+                if (avatarEl) {
+                    const initials = currentUser.name.split(" ").map(w => w[0]).join("").toUpperCase().slice(0, 2);
+                    if (initials) avatarEl.textContent = initials;
+                }
+            }
+            const navAvatar = document.getElementById("profileAvatarBtn");
+            if (navAvatar) {
+                const initials = currentUser.name.split(" ").map(w => w[0]).join("").toUpperCase().slice(0, 2);
+                if (initials) navAvatar.textContent = initials;
+            }
+        }
+    } catch(e) {}
+})();

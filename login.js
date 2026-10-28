@@ -98,7 +98,7 @@ loginForm.addEventListener("submit", async function (event) {
         message.textContent = `✓ Welcome back, ${userName}! Redirecting...`;
 
         setTimeout(() => {
-            window.location.href = "projects.html";
+            window.location.href = "home.html";
         }, 900);
 
     } catch (error) {

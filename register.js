@@ -102,7 +102,7 @@ registerForm.addEventListener("submit", async function (event) {
         registerForm.reset();
 
         setTimeout(() => {
-            window.location.href = "projects.html";
+            window.location.href = "home.html";
         }, 1100);
 
     } catch (error) {
