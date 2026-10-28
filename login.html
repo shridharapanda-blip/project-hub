@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ProjectHub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: white;
+            background: #080b16;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            padding: 35px;
+            border: 1px solid #29334d;
+            border-radius: 18px;
+            background: #111729;
+            box-shadow: 0 15px 50px #0006;
+        }
+
+        .logo {
+            margin-bottom: 25px;
+            color: #a78bfa;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .logo:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtitle {
+            margin-bottom: 28px;
+            color: #aab2c5;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            margin: 16px 0 8px;
+            color: #dce3f5;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #34405c;
+            border-radius: 9px;
+            outline: none;
+            background: #0b1020;
+            color: white;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: #a78bfa;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 24px;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            background: #8b5cf6;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover:not(:disabled) {
+            opacity: 0.95;
+            transform: translateY(-1px);
+        }
+
+        .demo-btn {
+            margin-top: 12px;
+            background: rgba(139, 92, 246, 0.12);
+            border: 1px solid #8b5cf6;
+            color: #c4b5fd;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .demo-btn:hover:not(:disabled) {
+            background: rgba(139, 92, 246, 0.25);
+            color: white;
+        }
+
+        button:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        #message {
+            margin-top: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+            text-align: center;
+        }
+
+        .register-link {
+            margin-top: 22px;
+            color: #aab2c5;
+            text-align: center;
+        }
+
+        a {
+            color: #a78bfa;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="login-card">
+        <a href="home.html" style="text-decoration: none;">
+            <div class="logo">✦ ProjectHub</div>
+        </a>
+
+        <h1>Welcome back</h1>
+
+        <p class="subtitle">
+            Log in to collaborate, build projects, and connect with students.
+        </p>
+
+        <form id="loginForm">
+            <label for="email">Email address</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit" id="loginButton">Log In</button>
+
+            <button type="button" id="demoLoginBtn" class="demo-btn">
+                ⚡ Quick Demo Student Login
+            </button>
+
+            <p id="message" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="register-link">
+            Don't have an account?
+            <a href="register.html">Create one</a>
+        </p>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

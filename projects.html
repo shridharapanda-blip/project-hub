@@ -1,0 +1,474 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#050816">
+
+    <title>Projects · ProjectHub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- BACKGROUND SCENE -->
+<div class="scene">
+    <div class="grid"></div>
+    <i class="orb one"></i>
+    <i class="orb two"></i>
+    <i class="orb three"></i>
+</div>
+
+
+<!-- NAVIGATION -->
+<header class="navbar">
+
+    <a class="logo" href="home.html">
+        Project<span>Hub</span>
+    </a>
+
+   <nav class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="projects.html" class="active">Projects</a>
+    <a href="members.html">Members</a>
+    <a href="hackathons.html">Hackathons</a>
+    <a href="messages.html">Messages</a>
+
+    <!-- Authentication links -->
+    <a href="login.html" id="loginLink">Log In</a>
+
+    <a href="register.html" id="registerLink">Register</a>
+
+    <button type="button" id="logoutBtn" style="display: none;">
+        Log Out
+    </button>
+</nav>
+
+    <button class="nav-cta" type="button" data-modal="projectModal">
+        ＋ Create project
+    </button>
+
+    <button class="menu-btn" type="button" aria-label="Open navigation">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-copy">
+
+            <div class="eyebrow">
+                Build together · Ship faster
+            </div>
+
+            <h1>
+                Ideas become <span>real projects.</span>
+            </h1>
+
+            <p>
+                Discover student-built products, find teammates who complement
+                your skills, and turn your next big idea into something people can use.
+            </p>
+
+            <div class="hero-actions">
+
+                <button
+                    class="primary-btn"
+                    type="button"
+                    data-modal="projectModal">
+                    ＋ Launch a project
+                </button>
+
+                <a class="secondary-btn" href="members.html">
+                    Find collaborators ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+                <strong id="projectCount">—</strong>
+                <span>Projects shared</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>640+</strong>
+                <span>Student builders</span>
+            </div>
+
+            <div class="hero-stat">
+                <strong>24</strong>
+                <span>Campuses</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECT TOOLBAR -->
+    <section class="toolbar">
+
+        <div>
+            <h2>Explore projects</h2>
+
+            <p>
+                Find a project that matches your curiosity and skills.
+            </p>
+        </div>
+
+
+        <div class="controls">
+
+            <input
+                id="searchInput"
+                class="search-box"
+                type="search"
+                placeholder="Search projects or tech…"
+                aria-label="Search projects">
+
+            <select
+                id="sortSelect"
+                class="select-box"
+                aria-label="Sort projects">
+
+                <option value="featured">Featured first</option>
+                <option value="newest">Recently added</option>
+                <option value="team">Most teammates needed</option>
+
+            </select>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY FILTERS -->
+    <div class="filters" id="filters">
+
+        <button class="filter active" type="button" data-filter="All">
+            All projects
+        </button>
+
+        <button class="filter" type="button" data-filter="AI/ML">
+            AI / ML
+        </button>
+
+        <button class="filter" type="button" data-filter="Web Development">
+            Web development
+        </button>
+
+        <button class="filter" type="button" data-filter="Mobile Development">
+            Mobile development
+        </button>
+
+        <button class="filter" type="button" data-filter="Cybersecurity">
+            Cybersecurity
+        </button>
+
+        <button class="filter" type="button" data-filter="Data Science">
+            Data science
+        </button>
+
+        <button class="filter" type="button" data-filter="Open Source">
+            Open source
+        </button>
+
+        <button class="filter" type="button" data-filter="Social Impact">
+            Social impact
+        </button>
+
+        <button class="filter" type="button" data-filter="Other">
+            Other
+        </button>
+
+    </div>
+
+
+    <!-- PROJECT LIST -->
+    <section class="project-grid" id="projectGrid">
+
+        <!-- LOADING MESSAGE -->
+        <p
+            id="loadingMessage"
+            style="display:none; grid-column:1/-1;"
+            role="status">
+            Loading projects...
+        </p>
+
+
+        <!-- ERROR MESSAGE -->
+        <p
+            id="errorMessage"
+            style="display:none; grid-column:1/-1;"
+            role="alert">
+            Unable to load projects. Please try again.
+        </p>
+
+
+        <!-- EMPTY STATE -->
+        <div
+            class="empty-state"
+            id="emptyState"
+            style="display:none;">
+
+            <strong>No matching projects yet</strong>
+
+            <p>
+                Try a different keyword or category, or create a new project.
+            </p>
+
+            <button
+                class="primary-btn"
+                type="button"
+                data-modal="projectModal">
+                Create a project
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM CTA -->
+    <section class="side-note">
+
+        <div>
+
+            <h3>
+                Your next great project starts with one teammate.
+            </h3>
+
+            <p>
+                Share your idea, make your required skills clear, and let
+                the right collaborators find you.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-btn"
+            type="button"
+            data-modal="projectModal">
+            Create a project
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    Made for curious builders · <span>NexusHub</span> · Student collaboration platform
+</footer>
+
+
+<!-- CREATE PROJECT MODAL -->
+<div
+    class="modal-backdrop"
+    id="projectModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="createProjectTitle">
+
+    <form class="modal" id="projectForm">
+
+        <button
+            type="button"
+            class="close-modal"
+            aria-label="Close">
+            ×
+        </button>
+
+        <div class="eyebrow">
+            Bring your idea to life
+        </div>
+
+        <h2 id="createProjectTitle">
+            Create a project
+        </h2>
+
+        <p>
+            Give your idea a clear name and tell future teammates what you're building.
+        </p>
+
+
+        <label for="projectName">
+            Project name
+        </label>
+
+        <input
+            id="projectName"
+            name="title"
+            type="text"
+            required
+            maxlength="60"
+            placeholder="e.g. Campus Copilot">
+
+
+        <label for="projectCategory">
+            Category
+        </label>
+
+        <select
+            id="projectCategory"
+            name="category"
+            required>
+
+            <option value="Web Development">Web Development</option>
+            <option value="AI/ML">AI / ML</option>
+            <option value="Mobile Development">Mobile Development</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Social Impact">Social Impact</option>
+            <option value="Open Source">Open Source</option>
+            <option value="Other">Other</option>
+
+        </select>
+
+
+        <label for="projectDescription">
+            What are you building?
+        </label>
+
+        <textarea
+            id="projectDescription"
+            name="description"
+            required
+            maxlength="400"
+            placeholder="Describe the problem, your idea, and who it helps..."></textarea>
+
+
+        <label for="projectSkills">
+            Required skills
+        </label>
+
+        <input
+            id="projectSkills"
+            name="skills"
+            type="text"
+            placeholder="e.g. React, Node.js, MongoDB">
+
+
+        <label for="requiredMembers">
+            Team size
+        </label>
+
+        <input
+            id="requiredMembers"
+            name="requiredMembers"
+            type="number"
+            min="1"
+            max="100"
+            value="3"
+            required>
+
+
+        <label for="githubLink">
+            GitHub link (optional)
+        </label>
+
+        <input
+            id="githubLink"
+            name="githubLink"
+            type="url"
+            placeholder="https://github.com/username/project">
+
+
+        <label for="demoLink">
+            Demo link (optional)
+        </label>
+
+        <input
+            id="demoLink"
+            name="demoLink"
+            type="url"
+            placeholder="https://example.com">
+
+
+        <p
+            id="projectFormMessage"
+            role="status"
+            style="display:none;">
+        </p>
+
+        <button class="primary-btn" type="submit">
+            Create project
+        </button>
+
+    </form>
+
+</div>
+
+
+<!-- PROJECT DETAILS MODAL -->
+<div
+    class="modal-backdrop"
+    id="detailModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="detailTitle">
+
+    <div class="modal">
+
+        <button
+            type="button"
+            class="close-modal"
+            aria-label="Close">
+            ×
+        </button>
+
+        <div class="eyebrow">
+            Project snapshot
+        </div>
+
+        <h2 id="detailTitle">
+            Project
+        </h2>
+
+        <p id="detailDescription"></p>
+
+        <label>Helpful skills</label>
+
+        <div class="tags" id="detailSkills"></div>
+
+        <button
+            class="primary-btn"
+            type="button"
+            id="interestBtn">
+            I'm interested in joining
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST MESSAGE -->
+<div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite">
+</div>
+
+
+<!-- JAVASCRIPT -->
+<script src="config.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

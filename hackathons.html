@@ -1,0 +1,390 @@
+ <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<title>Hackathons · NexusHub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scene">
+    <div class="grid"></div>
+    <i class="orb one"></i>
+    <i class="orb two"></i>
+    <i class="orb three"></i>
+</div>
+
+<header class="navbar">
+    <a class="logo" href="home.html">Project<span>Hub</span></a>
+
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="members.html">Members</a>
+        <a class="active" href="hackathons.html">Hackathons</a>
+        <a href="messages.html">Messages</a>
+    </nav>
+
+    <button class="nav-cta" data-modal="eventModal">＋ Add event</button>
+    <button class="menu-btn" aria-label="Open navigation">☰</button>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <div class="hero-copy">
+            <div class="eyebrow">Build under pressure · Learn by doing</div>
+            <h1>Find your next <span>big challenge.</span></h1>
+            <p>
+                Explore hackathons, innovation challenges, and build sprints.
+                Save events, check key dates, and find teammates before registration closes.
+            </p>
+
+            <div class="hero-actions">
+                <button class="primary-btn" data-modal="eventModal">＋ Add an event</button>
+                <a class="secondary-btn" href="members.html">Find a team ↗</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <strong>32</strong>
+                <span>Events listed</span>
+            </div>
+            <div class="hero-stat">
+                <strong>11</strong>
+                <span>Online options</span>
+            </div>
+            <div class="hero-stat">
+                <strong>₹18L+</strong>
+                <span>Prize pool listed</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="toolbar">
+        <div>
+            <h2>Upcoming opportunities</h2>
+            <p>Demo event cards—verify official dates before applying.</p>
+        </div>
+
+        <div class="controls">
+            <input
+                id="searchInput"
+                class="search-box"
+                type="search"
+                placeholder="Search events or themes…"
+                aria-label="Search events"
+            >
+
+            <select id="sortSelect" class="select-box" aria-label="Filter events">
+                <option value="all">All formats</option>
+                <option value="online">Online</option>
+                <option value="offline">In person</option>
+                <option value="hybrid">Hybrid</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="filters">
+        <button class="filter active" data-filter="All">All events</button>
+        <button class="filter" data-filter="AI / ML">AI / ML</button>
+        <button class="filter" data-filter="Web / App">Web / App</button>
+        <button class="filter" data-filter="Social Impact">Social impact</button>
+        <button class="filter" data-filter="Open Innovation">Open innovation</button>
+    </div>
+
+    <section class="event-grid" id="eventGrid">
+
+        <article class="card event-card"
+            data-category="AI / ML"
+            data-search="future ai challenge artificial intelligence machine learning online"
+            data-format="online"
+            data-new="5">
+
+            <div class="event-head">
+                <div>
+                    <div class="event-type">AI / ML · Online</div>
+                    <h3>FutureAI Challenge</h3>
+                </div>
+                <div class="event-date">
+                    <strong>08</strong>
+                    <span>Nov</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Prototype an AI solution that makes learning, work, or everyday decisions more accessible.
+            </p>
+
+            <div class="event-meta">
+                <span>◷ Registration closes · Nov 02</span>
+                <span>⌘ Team size · 2–4 people</span>
+                <span>✦ Prize pool · Demo listing</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">AI / ML</span>
+                <span class="tag">Prototype</span>
+                <span class="tag">Online</span>
+            </div>
+
+            <div class="event-bottom">
+                <span class="tiny-meta">Deadline approaching</span>
+                <button class="primary-btn save-event">☆ Save event</button>
+            </div>
+        </article>
+
+        <article class="card event-card"
+            data-category="Web / App"
+            data-search="build for campus hackathon web app student technology in person"
+            data-format="offline"
+            data-new="4">
+
+            <div class="event-head">
+                <div>
+                    <div class="event-type">Web / App · In person</div>
+                    <h3>Build for Campus</h3>
+                </div>
+                <div class="event-date">
+                    <strong>15</strong>
+                    <span>Nov</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Design practical tools for campus life—from shared resources to student collaboration and wellbeing.
+            </p>
+
+            <div class="event-meta">
+                <span>◷ Registration closes · Nov 09</span>
+                <span>⌘ Team size · 2–5 people</span>
+                <span>⌖ Campus innovation venue</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Web / App</span>
+                <span class="tag">Student life</span>
+                <span class="tag">In person</span>
+            </div>
+
+            <div class="event-bottom">
+                <span class="tiny-meta">Team formation open</span>
+                <button class="primary-btn save-event">☆ Save event</button>
+            </div>
+        </article>
+
+        <article class="card event-card"
+            data-category="Social Impact"
+            data-search="impact makers challenge sustainability accessibility climate hybrid"
+            data-format="hybrid"
+            data-new="3">
+
+            <div class="event-head">
+                <div>
+                    <div class="event-type">Social Impact · Hybrid</div>
+                    <h3>Impact Makers Sprint</h3>
+                </div>
+                <div class="event-date">
+                    <strong>22</strong>
+                    <span>Nov</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Create a testable solution for a real community problem with a clear path to measurable impact.
+            </p>
+
+            <div class="event-meta">
+                <span>◷ Registration closes · Nov 14</span>
+                <span>⌘ Team size · 3–5 people</span>
+                <span>✦ Mentorship sessions included</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Social impact</span>
+                <span class="tag">Sustainability</span>
+                <span class="tag">Hybrid</span>
+            </div>
+
+            <div class="event-bottom">
+                <span class="tiny-meta">Mentors available</span>
+                <button class="primary-btn save-event">☆ Save event</button>
+            </div>
+        </article>
+
+        <article class="card event-card"
+            data-category="Open Innovation"
+            data-search="open innovation buildathon developer tools civic tech fintech"
+            data-format="online"
+            data-new="2">
+
+            <div class="event-head">
+                <div>
+                    <div class="event-type">Open Innovation · Online</div>
+                    <h3>OpenBuild Weekend</h3>
+                </div>
+                <div class="event-date">
+                    <strong>29</strong>
+                    <span>Nov</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Bring your own idea, form a cross-functional team, and ship a working proof of concept over a weekend.
+            </p>
+
+            <div class="event-meta">
+                <span>◷ Registration closes · Nov 25</span>
+                <span>⌘ Team size · 1–4 people</span>
+                <span>⌘ Beginner-friendly track</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Open innovation</span>
+                <span class="tag">Buildathon</span>
+                <span class="tag">Online</span>
+            </div>
+
+            <div class="event-bottom">
+                <span class="tiny-meta">Solo builders welcome</span>
+                <button class="primary-btn save-event">☆ Save event</button>
+            </div>
+        </article>
+
+        <article class="card event-card"
+            data-category="AI / ML"
+            data-search="data for good datathon machine learning data visualization online"
+            data-format="online"
+            data-new="1">
+
+            <div class="event-head">
+                <div>
+                    <div class="event-type">AI / ML · Online</div>
+                    <h3>Data for Good Datathon</h3>
+                </div>
+                <div class="event-date">
+                    <strong>06</strong>
+                    <span>Dec</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Use open datasets to explore a local issue and present an evidence-based, responsible solution.
+            </p>
+
+            <div class="event-meta">
+                <span>◷ Registration closes · Nov 30</span>
+                <span>⌘ Team size · 2–4 people</span>
+                <span>✦ Data storytelling track</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Data science</span>
+                <span class="tag">ML</span>
+                <span class="tag">Open data</span>
+            </div>
+
+            <div class="event-bottom">
+                <span class="tiny-meta">Dataset provided</span>
+                <button class="primary-btn save-event">☆ Save event</button>
+            </div>
+        </article>
+
+        <article class="card event-card"
+            data-category="Web / App"
+            data-search="accessible web challenge inclusive design web app hybrid"
+            data-format="hybrid"
+            data-new="0">
+
+            <div class="event-head">
+                <div>
+                    <div class="event-type">Web / App · Hybrid</div>
+                    <h3>Accessible Web Challenge</h3>
+                </div>
+                <div class="event-date">
+                    <strong>13</strong>
+                    <span>Dec</span>
+                </div>
+            </div>
+
+            <p class="description">
+                Improve digital experiences with accessible interfaces, keyboard navigation, and inclusive product thinking.
+            </p>
+
+            <div class="event-meta">
+                <span>◷ Registration closes · Dec 06</span>
+                <span>⌘ Team size · 2–4 people</span>
+                <span>⌘ Accessibility review track</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Web / App</span>
+                <span class="tag">Accessibility</span>
+                <span class="tag">UX</span>
+            </div>
+
+            <div class="event-bottom">
+                <span class="tiny-meta">Designers + developers</span>
+                <button class="primary-btn save-event">☆ Save event</button>
+            </div>
+        </article>
+
+        <div class="empty-state" id="emptyState">
+            <strong>No matching events</strong>
+            Try a different keyword, theme, or format.
+        </div>
+    </section>
+
+    <section class="side-note">
+        <div>
+            <h3>Don't have a team yet?</h3>
+            <p>
+                Browse members, share your skills, and find people who want to build the same kind of thing.
+            </p>
+        </div>
+        <a class="primary-btn" href="members.html">Find teammates ↗</a>
+    </section>
+</main>
+
+<footer class="footer">
+    Made for curious builders · <span>NexusHub</span> · Event details shown are sample data, not verified listings.
+</footer>
+
+<div class="modal-backdrop" id="eventModal">
+    <form class="modal" id="eventForm">
+        <button type="button" class="close-modal" aria-label="Close">×</button>
+
+        <div class="eyebrow">Share an opportunity</div>
+        <h2>Add a hackathon</h2>
+        <p>
+            Add an event to your local preview. Verify dates and eligibility on the official organizer page before registering.
+        </p>
+
+        <label for="eventName">Event name</label>
+        <input id="eventName" required placeholder="Hackathon name">
+
+        <label for="eventTheme">Theme</label>
+        <select id="eventTheme">
+            <option>AI / ML</option>
+            <option>Web / App</option>
+            <option>Social Impact</option>
+            <option>Open Innovation</option>
+        </select>
+
+        <label for="eventDate">Event date</label>
+        <input id="eventDate" type="date" required>
+
+        <label for="eventLink">Official event link (optional)</label>
+        <input id="eventLink" type="url" placeholder="https://…">
+
+        <button class="primary-btn" type="submit">Add event preview</button>
+    </form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="hackathons.js"></script>
+</body>
+</html>

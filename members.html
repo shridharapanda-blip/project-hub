@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050816">
+<title>Members · NexusHub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scene">
+    <div class="grid"></div>
+    <i class="orb one"></i>
+    <i class="orb two"></i>
+    <i class="orb three"></i>
+</div>
+
+<header class="navbar">
+    <a class="logo" href="home.html">Project<span>Hub</span></a>
+
+    <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a class="active" href="members.html">Members</a>
+        <a href="hackathons.html">Hackathons</a>
+        <a href="messages.html">Messages</a>
+    </nav>
+
+    <button class="nav-cta" data-modal="joinModal">＋ Create profile</button>
+    <button class="menu-btn" aria-label="Open navigation">☰</button>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <div class="hero-copy">
+            <div class="eyebrow">Your people are out there</div>
+            <h1>Meet your next <span>teammate.</span></h1>
+            <p>
+                Find curious developers, designers, researchers, and makers.
+                Connect around skills and interests—not just your branch or college.
+            </p>
+
+            <div class="hero-actions">
+                <button class="primary-btn" data-modal="joinModal">＋ Create your profile</button>
+                <a class="secondary-btn" href="projects.html">Explore projects ↗</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <strong>640+</strong>
+                <span>Members</span>
+            </div>
+            <div class="hero-stat">
+                <strong>24</strong>
+                <span>Universities</span>
+            </div>
+            <div class="hero-stat">
+                <strong>18</strong>
+                <span>Skill areas</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="toolbar">
+        <div>
+            <h2>Discover members</h2>
+            <p>Search by name, role, university, or skill.</p>
+        </div>
+
+        <div class="controls">
+            <input
+                id="searchInput"
+                class="search-box"
+                type="search"
+                placeholder="Search people or skills…"
+                aria-label="Search members"
+            >
+
+            <select id="sortSelect" class="select-box" aria-label="Filter members">
+                <option value="all">All availability</option>
+                <option value="available">Open to collaborate</option>
+                <option value="mentor">Mentors</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="filters">
+        <button class="filter active" data-filter="All">Everyone</button>
+        <button class="filter" data-filter="Frontend">Frontend</button>
+        <button class="filter" data-filter="Backend">Backend</button>
+        <button class="filter" data-filter="AI / ML">AI / ML</button>
+        <button class="filter" data-filter="UI/UX">UI/UX design</button>
+        <button class="filter" data-filter="Cybersecurity">Cybersecurity</button>
+    </div>
+
+    <section class="member-grid" id="memberGrid">
+
+        <article class="card member-card"
+            data-category="Frontend"
+            data-search="aanya sharma frontend react css design vssut"
+            data-available="yes"
+            data-mentor="no">
+
+            <div class="member-avatar">AS</div>
+            <h3>Aanya Sharma</h3>
+            <div class="member-role">Frontend Developer</div>
+            <div class="member-college">VSSUT · Computer Science</div>
+
+            <div class="member-skills">
+                <span class="tag">React</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Figma</span>
+            </div>
+
+            <div class="member-stats">
+                <div><strong>4</strong><span>Projects</span></div>
+                <div><strong>6</strong><span>Skills</span></div>
+                <div><strong>Open</strong><span>Availability</span></div>
+            </div>
+
+            <button class="secondary-btn full-btn connect-btn" data-name="Aanya Sharma">
+                Connect with Aanya
+            </button>
+        </article>
+
+        <article class="card member-card"
+            data-category="Backend"
+            data-search="rohan das backend node express mongodb api vssut"
+            data-available="yes"
+            data-mentor="yes">
+
+            <div class="member-avatar" style="background:linear-gradient(135deg,#fb923c,#f43f5e)">RD</div>
+            <h3>Rohan Das</h3>
+            <div class="member-role">Backend Developer</div>
+            <div class="member-college">VSSUT · Computer Science</div>
+
+            <div class="member-skills">
+                <span class="tag">Node.js</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">APIs</span>
+            </div>
+
+            <div class="member-stats">
+                <div><strong>7</strong><span>Projects</span></div>
+                <div><strong>8</strong><span>Skills</span></div>
+                <div><strong>Mentor</strong><span>Status</span></div>
+            </div>
+
+            <button class="secondary-btn full-btn connect-btn" data-name="Rohan Das">
+                Connect with Rohan
+            </button>
+        </article>
+
+        <article class="card member-card"
+            data-category="AI / ML"
+            data-search="meera patel machine learning ai python data science"
+            data-available="yes"
+            data-mentor="no">
+
+            <div class="member-avatar" style="background:linear-gradient(135deg,#34d399,#0891b2)">MP</div>
+            <h3>Meera Patel</h3>
+            <div class="member-role">AI / ML Learner</div>
+            <div class="member-college">Institute of Technology · Data Science</div>
+
+            <div class="member-skills">
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+                <span class="tag">Pandas</span>
+            </div>
+
+            <div class="member-stats">
+                <div><strong>3</strong><span>Projects</span></div>
+                <div><strong>5</strong><span>Skills</span></div>
+                <div><strong>Open</strong><span>Availability</span></div>
+            </div>
+
+            <button class="secondary-btn full-btn connect-btn" data-name="Meera Patel">
+                Connect with Meera
+            </button>
+        </article>
+
+        <article class="card member-card"
+            data-category="UI/UX"
+            data-search="kabir singh ui ux designer figma prototype research"
+            data-available="no"
+            data-mentor="yes">
+
+            <div class="member-avatar" style="background:linear-gradient(135deg,#f472b6,#8b5cf6)">KS</div>
+            <h3>Kabir Singh</h3>
+            <div class="member-role">Product & UI/UX Designer</div>
+            <div class="member-college">National Design Institute</div>
+
+            <div class="member-skills">
+                <span class="tag">Figma</span>
+                <span class="tag">Research</span>
+                <span class="tag">Prototyping</span>
+            </div>
+
+            <div class="member-stats">
+                <div><strong>9</strong><span>Projects</span></div>
+                <div><strong>7</strong><span>Skills</span></div>
+                <div><strong>Mentor</strong><span>Status</span></div>
+            </div>
+
+            <button class="secondary-btn full-btn connect-btn" data-name="Kabir Singh">
+                Connect with Kabir
+            </button>
+        </article>
+
+        <article class="card member-card"
+            data-category="Cybersecurity"
+            data-search="isha mohanty cybersecurity network linux ctf security"
+            data-available="yes"
+            data-mentor="no">
+
+            <div class="member-avatar" style="background:linear-gradient(135deg,#22d3ee,#2563eb)">IM</div>
+            <h3>Isha Mohanty</h3>
+            <div class="member-role">Cybersecurity Enthusiast</div>
+            <div class="member-college">Eastern Tech University</div>
+
+            <div class="member-skills">
+                <span class="tag">Linux</span>
+                <span class="tag">Networking</span>
+                <span class="tag">CTF</span>
+            </div>
+
+            <div class="member-stats">
+                <div><strong>2</strong><span>Projects</span></div>
+                <div><strong>6</strong><span>Skills</span></div>
+                <div><strong>Open</strong><span>Availability</span></div>
+            </div>
+
+            <button class="secondary-btn full-btn connect-btn" data-name="Isha Mohanty">
+                Connect with Isha
+            </button>
+        </article>
+
+        <article class="card member-card"
+            data-category="Backend"
+            data-search="arjun naik full stack javascript react express postgres"
+            data-available="yes"
+            data-mentor="no">
+
+            <div class="member-avatar" style="background:linear-gradient(135deg,#a78bfa,#6366f1)">AN</div>
+            <h3>Arjun Naik</h3>
+            <div class="member-role">Full-Stack Developer</div>
+            <div class="member-college">VSSUT · Information Technology</div>
+
+            <div class="member-skills">
+                <span class="tag">JavaScript</span>
+                <span class="tag">Express</span>
+                <span class="tag">SQL</span>
+            </div>
+
+            <div class="member-stats">
+                <div><strong>5</strong><span>Projects</span></div>
+                <div><strong>7</strong><span>Skills</span></div>
+                <div><strong>Open</strong><span>Availability</span></div>
+            </div>
+
+            <button class="secondary-btn full-btn connect-btn" data-name="Arjun Naik">
+                Connect with Arjun
+            </button>
+        </article>
+
+        <div class="empty-state" id="emptyState">
+            <strong>No members found</strong>
+            Try another skill or availability filter.
+        </div>
+    </section>
+
+    <section class="side-note">
+        <div>
+            <h3>Good teams are built from different strengths.</h3>
+            <p>
+                Show your skills, interests, and availability so collaborators know where you fit.
+            </p>
+        </div>
+        <button class="primary-btn" data-modal="joinModal">Build your profile</button>
+    </section>
+</main>
+
+<footer class="footer">
+    Made for curious builders · <span>NexusHub</span> · Demo data for UI preview
+</footer>
+
+<div class="modal-backdrop" id="joinModal">
+    <form class="modal" id="joinForm">
+        <button type="button" class="close-modal" aria-label="Close">×</button>
+
+        <div class="eyebrow">Make your skills discoverable</div>
+        <h2>Create your member profile</h2>
+        <p>
+            This demo shows the profile flow. A production version would save your profile to a database.
+        </p>
+
+        <label for="memberName">Your name</label>
+        <input id="memberName" required placeholder="Full name">
+
+        <label for="memberRole">Your role</label>
+        <select id="memberRole">
+            <option>Frontend Developer</option>
+            <option>Backend Developer</option>
+            <option>Full-Stack Developer</option>
+            <option>AI / ML Learner</option>
+            <option>UI/UX Designer</option>
+            <option>Cybersecurity Enthusiast</option>
+        </select>
+
+        <label for="memberSkills">Top skills</label>
+        <input id="memberSkills" required placeholder="React, C++, UI design">
+
+        <button class="primary-btn" type="submit">Preview profile</button>
+    </form>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="config.js"></script>
+<script src="members.js"></script>
+</body>
+</html>
