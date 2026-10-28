@@ -7,8 +7,8 @@ const isLocalhost = window.location.hostname === "localhost" ||
                     window.location.hostname === "127.0.0.1" || 
                     window.location.protocol === "file:";
 
-// Set this to your live Render backend URL when you deploy Phase 2:
-const PRODUCTION_BACKEND_URL = "https://projecthub-backend.onrender.com";
+// Set this to your live Render backend URL:
+const PRODUCTION_BACKEND_URL = "https://projecthub-backend-j21s.onrender.com";
 
 const BACKEND_URL = isLocalhost 
     ? "http://localhost:5000" 
