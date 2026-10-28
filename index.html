@@ -1,0 +1,1740 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="ProjectHub - Discover, build and collaborate on student projects.">
+
+    <title>ProjectHub — Build Together</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="scene">
+    <div class="grid"></div>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="cube cube-1"></div>
+    <div class="cube cube-2"></div>
+</div>
+
+<div class="mouse-glow"></div>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="#" class="logo">
+        Project<span>Hub</span>
+    </a>
+
+    <div class="search">
+
+        <span>⌕</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search projects, skills..."
+        >
+
+    </div>
+
+    <nav>
+
+        <a href="home.html" class="active">Home</a>
+
+        <a href="projects.html">Projects</a>
+
+        <a href="members.html">Members</a>
+
+        <a href="hackathons.html">Hackathons</a>
+
+    </nav>
+
+<div class="nav-right">
+
+    <!-- Notification Button -->
+    <button id="notificationBtn" class="nav-icon-btn" title="Notifications">
+        <i class="fa-regular fa-bell"></i>
+        <span class="notification-dot"></span>
+    </button>
+
+    <!-- Message Button -->
+    <button id="messageBtn" class="nav-icon-btn" title="Messages">
+        <i class="fa-regular fa-envelope"></i>
+    </button>
+
+    <!-- Profile Avatar -->
+    <button
+    type="button"
+    class="avatar"
+    id="profileAvatarBtn"
+    title="Customize your profile"
+    aria-label="Open your profile"
+>
+    SP
+</button>
+
+</div>
+
+
+<button
+        class="menu"
+        id="menuBtn"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<div
+    class="mobile-menu"
+    id="mobileMenu"
+>
+
+    <a href="home.html">Home</a>
+
+    <a href="projects.html">Projects</a>
+
+    <a href="members.html">Members</a>
+
+    <a href="hackathons.html">Hackathons</a>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="layout">
+
+
+<!-- =====================================================
+     LEFT SIDEBAR
+===================================================== -->
+
+<aside class="left">
+
+
+    <!-- PROFILE -->
+
+    <div class="card profile reveal">
+
+        <div class="profile-cover"></div>
+
+        <div class="profile-avatar">
+            SP
+        </div>
+
+        <h2>
+            Shridhara Panda
+        </h2>
+
+        <p class="college">
+            VSSUT, Burla
+        </p>
+
+        <p class="course">
+            Computer Science Engineering
+        </p>
+
+        <div class="stats">
+
+            <div>
+                <strong
+                    class="counter"
+                    data-value="12">
+                    0
+                </strong>
+
+                <span>Projects</span>
+            </div>
+
+            <div>
+                <strong
+                    class="counter"
+                    data-value="86">
+                    0
+                </strong>
+
+                <span>Connections</span>
+            </div>
+
+            <div>
+                <strong
+                    class="counter"
+                    data-value="24">
+                    0
+                </strong>
+
+                <span>Skills</span>
+            </div>
+
+        </div>
+
+        <div class="skills">
+
+            <span>JavaScript</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>C++</span>
+            <span>DSA</span>
+
+        </div>
+
+        <button
+            class="outline-btn"
+            id="profileBtn">
+            View Profile
+        </button>
+
+    </div>
+
+
+    <!-- SPONSORED -->
+
+    <div class="card sponsored reveal">
+
+        <div class="card-title">
+
+            <h3>
+                Sponsored Projects
+            </h3>
+
+            <span>✦</span>
+
+        </div>
+
+        <div class="sponsored-project">
+
+            <small>
+                SPONSORED
+            </small>
+
+            <h4>
+                Smart Campus
+            </h4>
+
+            <p>
+                Build the next generation
+                campus experience.
+            </p>
+
+            <button class="explore-sponsored-btn" data-project="smart-campus">
+                Explore →
+            </button>
+
+        </div>
+
+        <div class="sponsored-project">
+
+            <small>
+                SPONSORED
+            </small>
+
+            <h4>
+                AI Agriculture
+            </h4>
+
+            <p>
+                Technology for modern farming.
+            </p>
+
+            <button class="explore-sponsored-btn" data-project="ai-agriculture">
+                Explore →
+            </button>
+
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- =====================================================
+     CENTER FEED
+===================================================== -->
+
+<section
+    class="feed"
+    id="projects">
+
+
+    <!-- HERO -->
+
+    <div class="hero reveal">
+
+        <div>
+
+            <span class="eyebrow">
+                STUDENT INNOVATION NETWORK
+            </span>
+
+            <h1>
+                Build.
+                <span>Collaborate.</span>
+                Grow.
+            </h1>
+
+            <p>
+                Discover student projects, find talented
+                teammates and turn ideas into reality.
+            </p>
+
+        </div>
+
+        <button
+            class="primary-btn"
+            id="createProject">
+
+            <span>＋</span>
+
+            Create Project
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         CREATE POST
+    ================================================= -->
+
+    <div class="create-post card reveal">
+
+        <div class="post-top">
+
+            <div class="profile-avatar small-avatar">
+                SP
+            </div>
+
+            <textarea
+                id="postText"
+                placeholder="Share an update, project idea, achievement..."
+            ></textarea>
+
+        </div>
+
+
+        <!-- PREVIEW -->
+
+        <div
+            id="mediaPreview"
+            class="media-preview">
+        </div>
+
+
+        <!-- POST TYPE -->
+
+        <div
+            id="postType"
+            class="post-type">
+        </div>
+
+
+        <div class="post-bottom">
+
+            <div class="post-options">
+
+                <label class="post-option">
+
+                    <span class="option-icon">
+                        📷
+                    </span>
+
+                    <span>Photo</span>
+
+                    <input
+                        type="file"
+                        id="imageInput"
+                        accept="image/*">
+
+                </label>
+
+
+                <label class="post-option">
+
+                    <span class="option-icon">
+                        🎥
+                    </span>
+
+                    <span>Video</span>
+
+                    <input
+                        type="file"
+                        id="videoInput"
+                        accept="video/*">
+
+                </label>
+
+
+                <button
+                    class="post-option"
+                    id="projectOption">
+
+                    <span class="option-icon">
+                        🚀
+                    </span>
+
+                    <span>Project</span>
+
+                </button>
+
+
+                <button
+                    class="post-option"
+                    id="eventOption">
+
+                    <span class="option-icon">
+                        📅
+                    </span>
+
+                    <span>Event</span>
+
+                </button>
+
+            </div>
+
+
+            <button
+                class="primary-btn post-btn"
+                id="postBtn">
+
+                Post
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         FILTER
+    ================================================= -->
+
+    <div class="filters reveal">
+
+        <button
+            class="filter active"
+            data-filter="all">
+
+            All Projects
+
+        </button>
+
+        <button
+            class="filter"
+            data-filter="web">
+
+            Web
+
+        </button>
+
+        <button
+            class="filter"
+            data-filter="ai">
+
+            AI / ML
+
+        </button>
+
+        <button
+            class="filter"
+            data-filter="hardware">
+
+            Hardware
+
+        </button>
+
+        <button
+            class="filter"
+            data-filter="social">
+
+            Social Impact
+
+        </button>
+
+    </div>
+
+
+    <!-- =================================================
+         PROJECT 1
+    ================================================= -->
+
+    <article
+        class="project-card tilt reveal"
+        data-category="web"
+        data-title="Smart Queue Management">
+
+        <div class="project-header">
+
+            <div class="user">
+
+                <div class="project-avatar">
+                    AK
+                </div>
+
+                <div>
+
+                    <h4>
+                        Ankit Kumar
+                    </h4>
+
+                    <p>
+                        VSSUT · 2 hours ago
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="completed">
+                ● Completed
+            </span>
+
+        </div>
+
+
+        <div class="project-content">
+
+            <small>
+                WEB DEVELOPMENT
+            </small>
+
+            <h2>
+                Smart Queue Management
+            </h2>
+
+            <p>
+                A digital platform that helps students
+                manage queues for college services,
+                canteens and administrative offices.
+            </p>
+
+            <div class="tags">
+
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-bottom">
+
+            <div class="actions">
+
+                <button class="like">
+                    ♡ <span>42</span>
+                </button>
+
+                <button class="comment">
+                    ◌ <span>12</span>
+                </button>
+
+                <button class="share">
+                    ↗ Share
+                </button>
+
+            </div>
+
+            <button class="view-project">
+                View Project →
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         PROJECT 2
+    ================================================= -->
+
+    <article
+        class="project-card tilt reveal"
+        data-category="ai"
+        data-title="AI Agriculture Platform">
+
+        <div class="project-header">
+
+            <div class="user">
+
+                <div class="project-avatar purple">
+                    RP
+                </div>
+
+                <div>
+
+                    <h4>
+                        Rahul Patra
+                    </h4>
+
+                    <p>
+                        CET Bhubaneswar · 5 hours ago
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="completed">
+                ● Completed
+            </span>
+
+        </div>
+
+
+        <div class="project-content">
+
+            <small>
+                ARTIFICIAL INTELLIGENCE
+            </small>
+
+            <h2>
+                AI Agriculture Platform
+            </h2>
+
+            <p>
+                An intelligent platform that helps
+                farmers understand crop demand,
+                pricing and agricultural trends.
+            </p>
+
+            <div class="tags">
+
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>MongoDB</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-bottom">
+
+            <div class="actions">
+
+                <button class="like">
+                    ♡ <span>67</span>
+                </button>
+
+                <button class="comment">
+                    ◌ <span>18</span>
+                </button>
+
+                <button class="share">
+                    ↗ Share
+                </button>
+
+            </div>
+
+            <button class="view-project">
+                View Project →
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         PROJECT 3
+    ================================================= -->
+
+    <article
+        class="project-card tilt reveal"
+        data-category="social"
+        data-title="Student Skill Exchange">
+
+        <div class="project-header">
+
+            <div class="user">
+
+                <div class="project-avatar cyan">
+                    SM
+                </div>
+
+                <div>
+
+                    <h4>
+                        Suman Mishra
+                    </h4>
+
+                    <p>
+                        VSSUT · Yesterday
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="completed">
+                ● Completed
+            </span>
+
+        </div>
+
+
+        <div class="project-content">
+
+            <small>
+                SOCIAL IMPACT
+            </small>
+
+            <h2>
+                Student Skill Exchange
+            </h2>
+
+            <p>
+                Students teach each other programming,
+                design, communication and other skills.
+            </p>
+
+            <div class="tags">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-bottom">
+
+            <div class="actions">
+
+                <button class="like">
+                    ♡ <span>54</span>
+                </button>
+
+                <button class="comment">
+                    ◌ <span>15</span>
+                </button>
+
+                <button class="share">
+                    ↗ Share
+                </button>
+
+            </div>
+
+            <button class="view-project">
+                View Project →
+            </button>
+
+        </div>
+
+    </article>
+
+
+    <!-- =================================================
+         PROJECT 4
+    ================================================= -->
+
+    <article
+        class="project-card tilt reveal"
+        data-category="hardware"
+        data-title="Smart Campus Safety Device">
+
+        <div class="project-header">
+
+            <div class="user">
+
+                <div class="project-avatar orange">
+                    PS
+                </div>
+
+                <div>
+
+                    <h4>
+                        Priya Sharma
+                    </h4>
+
+                    <p>
+                        NIT Rourkela · 2 days ago
+                    </p>
+
+                </div>
+
+            </div>
+
+            <span class="completed">
+                ● Completed
+            </span>
+
+        </div>
+
+
+        <div class="project-content">
+
+            <small>
+                HARDWARE & IoT
+            </small>
+
+            <h2>
+                Smart Campus Safety Device
+            </h2>
+
+            <p>
+                An affordable IoT device designed
+                to improve safety and emergency
+                communication inside campuses.
+            </p>
+
+            <div class="tags">
+
+                <span>ESP32</span>
+                <span>IoT</span>
+                <span>Arduino</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="project-bottom">
+
+            <div class="actions">
+
+                <button class="like">
+                    ♡ <span>31</span>
+                </button>
+
+                <button class="comment">
+                    ◌ <span>9</span>
+                </button>
+
+                <button class="share">
+                    ↗ Share
+                </button>
+
+            </div>
+
+            <button class="view-project">
+                View Project →
+            </button>
+
+        </div>
+
+    </article>
+
+
+</section>
+
+
+<!-- =====================================================
+     RIGHT SIDEBAR
+===================================================== -->
+
+<aside class="right">
+
+
+    <!-- MENTOR -->
+
+    <div class="card right-card reveal">
+
+        <div class="right-icon">
+            ◈
+        </div>
+
+        <small>
+            GUIDANCE
+        </small>
+
+        <h3>
+            Find a Mentor
+        </h3>
+
+        <p>
+            Connect with seniors, researchers
+            and industry professionals.
+        </p>
+
+        <button
+            class="secondary-btn"
+            id="mentorBtn">
+
+            Find Mentor →
+
+        </button>
+
+    </div>
+
+
+    <!-- SPONSOR -->
+
+    <div class="card sponsor-card reveal">
+
+        <div class="sponsor-icon">
+            ✦
+        </div>
+
+        <small>
+            PROJECT FUNDING
+        </small>
+
+        <h3>
+            Sponsor Your Project
+        </h3>
+
+        <p>
+            Get your project discovered by
+            companies and organizations.
+        </p>
+
+        <button
+            class="primary-btn"
+            id="sponsorBtn">
+
+            Get Sponsorship
+
+        </button>
+
+    </div>
+
+
+    <!-- HACKATHONS -->
+
+    <div
+        class="card hackathons reveal"
+        id="hackathons">
+
+        <div class="card-title">
+
+            <div>
+
+                <small>
+                    EVENTS
+                </small>
+
+                <h3>
+                    Recent Hackathons
+                </h3>
+
+            </div>
+
+            <span>
+                ◇
+            </span>
+
+        </div>
+
+
+        <div class="event event-clickable" data-event="aws">
+
+            <div class="date">
+
+                <strong>
+                    28
+                </strong>
+
+                <span>
+                    SEP
+                </span>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    AWS Student Hackathon
+                </h4>
+
+                <p>
+                    Online · Team of 2
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event event-clickable" data-event="innovation">
+
+            <div class="date">
+
+                <strong>
+                    02
+                </strong>
+
+                <span>
+                    OCT
+                </span>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Innovation Challenge
+                </h4>
+
+                <p>
+                    IIT Kharagpur
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="event event-clickable" data-event="techfest">
+
+            <div class="date">
+
+                <strong>
+                    10
+                </strong>
+
+                <span>
+                    OCT
+                </span>
+
+            </div>
+
+            <div>
+
+                <h4>
+                    Student Tech Fest
+                </h4>
+
+                <p>
+                    Bhubaneswar
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="text-btn" id="viewAllEventsBtn">
+            View all events →
+        </button>
+
+    </div>
+
+</aside>
+
+</main>
+
+
+<!-- =====================================================
+     PROJECT MODAL
+===================================================== -->
+
+<div
+    class="modal-bg"
+    id="modal">
+
+    <div class="modal">
+
+        <button
+            class="close"
+            id="closeModal">
+
+            ×
+
+        </button>
+
+        <small id="modalCategory">
+            PROJECT DETAILS
+        </small>
+
+        <h2 id="modalTitle">
+            Project
+        </h2>
+
+        <div id="modalMeta" class="modal-author-meta">
+            <!-- Populated dynamically -->
+        </div>
+
+        <p id="modalDescription">
+            Description
+        </p>
+
+        <div class="tags" id="modalTags" style="margin: 14px 0;">
+            <!-- Populated dynamically -->
+        </div>
+
+        <div class="modal-buttons">
+
+            <button class="primary-btn" id="modalCollaborateBtn">
+                Collaborate
+            </button>
+
+            <button class="secondary-btn" id="modalSaveBtn">
+                Save Project
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     COMMENT MODAL
+===================================================== -->
+
+<div
+    class="modal-bg"
+    id="commentModal">
+
+    <div class="modal comment-modal">
+
+        <button
+            class="close"
+            id="closeCommentModal">
+
+            ×
+
+        </button>
+
+        <small>
+            COMMENTS
+        </small>
+
+        <h2>
+            Project Discussion
+        </h2>
+
+        <div
+            class="comments"
+            id="comments">
+
+            <div class="comment-item">
+
+                <div class="comment-avatar">
+                    RS
+                </div>
+
+                <div>
+
+                    <strong>
+                        Riya Sharma
+                    </strong>
+
+                    <p>
+                        This project looks really useful!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="comment-input">
+
+            <input
+                id="commentInput"
+                placeholder="Write a comment...">
+
+            <button
+                class="primary-btn"
+                id="commentSubmit">
+
+                Send
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- NOTIFICATION PANEL -->
+<div class="notification-panel" id="notificationPanel">
+
+    <div class="notification-header">
+        <div>
+            <h3>Notifications</h3>
+            <p>You have new updates</p>
+        </div>
+
+        <button id="closeNotifications" class="notification-close">
+            &times;
+        </button>
+    </div>
+
+    <div class="notification-list">
+
+        <div class="notification-item" id="notif-connection">
+            <div class="notification-icon">👤</div>
+            <div class="notif-body">
+                <strong>New connection</strong>
+                <p>Rahul Patra sent you a connection request.</p>
+                <small>2 minutes ago</small>
+                <div class="notif-actions">
+                    <button class="notif-btn primary-btn-sm accept-connection-btn" data-name="Rahul Patra">Accept</button>
+                    <button class="notif-btn secondary-btn-sm decline-connection-btn">Ignore</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <div class="notification-icon">🚀</div>
+            <div class="notif-body">
+                <strong>Project invitation</strong>
+                <p>You have been invited to join an AI project.</p>
+                <small>10 minutes ago</small>
+                <div class="notif-actions">
+                    <button class="notif-btn primary-btn-sm notif-view-project" data-title="AI Agriculture Platform">View Project</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <div class="notification-icon">💬</div>
+            <div class="notif-body">
+                <strong>New comment</strong>
+                <p>Ankit commented on your project.</p>
+                <small>30 minutes ago</small>
+                <div class="notif-actions">
+                    <button class="notif-btn primary-btn-sm notif-view-comment" data-title="Smart Queue Management">View Comment</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="notification-item">
+            <div class="notification-icon">🏆</div>
+            <div class="notif-body">
+                <strong>Hackathon update</strong>
+                <p>A new student hackathon is available.</p>
+                <small>1 hour ago</small>
+                <div class="notif-actions">
+                    <button class="notif-btn primary-btn-sm notif-view-hackathon" data-event="aws">Explore</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="mark-read-btn" id="markNotificationsRead">
+        Mark all as read
+    </button>
+
+</div>
+<!-- ==============================
+     PROFILE CUSTOMIZATION MODAL
+================================== -->
+
+<div class="profile-editor-overlay" id="profileEditor">
+
+    <div class="profile-editor">
+
+        <!-- HEADER -->
+        <div class="profile-editor-header">
+            <div>
+                <span class="profile-eyebrow">YOUR ACCOUNT</span>
+                <h2>Customize Profile</h2>
+                <p>Make your profile stand out in ProjectHub.</p>
+            </div>
+
+            <button
+                type="button"
+                class="profile-close"
+                id="closeProfileEditor"
+                aria-label="Close profile editor"
+            >&times;</button>
+        </div>
+
+        <!-- COVER PHOTO -->
+        <div class="editor-cover" id="editorCover">
+
+            <img id="coverPreview" alt="Profile cover">
+
+            <label class="cover-upload-btn">
+                <i class="fa-solid fa-camera"></i>
+                Change Cover
+
+                <input
+                    type="file"
+                    id="coverInput"
+                    accept="image/*"
+                    hidden
+                >
+            </label>
+
+        </div>
+
+        <!-- PROFILE IMAGE -->
+        <div class="editor-avatar-section">
+
+            <div class="editor-avatar-wrap">
+
+                <img
+                    id="profileImagePreview"
+                    src=""
+                    alt="Your profile picture"
+                >
+
+                <div id="profileInitials">SP</div>
+
+                <label class="avatar-upload-btn" title="Upload profile picture">
+                    <i class="fa-solid fa-camera"></i>
+
+                    <input
+                        type="file"
+                        id="profileImageInput"
+                        accept="image/*"
+                        hidden
+                    >
+                </label>
+
+            </div>
+
+            <div>
+                <h3 id="previewName">Shridhara Panda</h3>
+                <p id="previewCollege">VSSUT, Burla</p>
+            </div>
+
+        </div>
+
+        <!-- FORM -->
+        <form id="profileForm">
+
+            <div class="profile-form-grid">
+
+                <div class="profile-field">
+                    <label for="profileName">Full Name *</label>
+                    <input
+                        type="text"
+                        id="profileName"
+                        maxlength="60"
+                        value="Shridhara Panda"
+                        required
+                    >
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileUsername">Username</label>
+                    <input
+                        type="text"
+                        id="profileUsername"
+                        maxlength="30"
+                        placeholder="e.g. shridhara_dev"
+                    >
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileCollege">University / College *</label>
+                    <input
+                        type="text"
+                        id="profileCollege"
+                        maxlength="100"
+                        value="VSSUT, Burla"
+                        required
+                    >
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileBranch">Branch / Department</label>
+                    <input
+                        type="text"
+                        id="profileBranch"
+                        maxlength="100"
+                        value="Computer Science Engineering"
+                    >
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileYear">Study Year</label>
+
+                    <select id="profileYear">
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                        <option value="Graduate">Graduate</option>
+                    </select>
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileLocation">Location</label>
+                    <input
+                        type="text"
+                        id="profileLocation"
+                        maxlength="100"
+                        placeholder="City, State"
+                    >
+                </div>
+
+                <div class="profile-field full-width">
+                    <label for="profileBio">About Me</label>
+
+                    <textarea
+                        id="profileBio"
+                        maxlength="500"
+                        rows="4"
+                        placeholder="Tell other students about yourself, your goals and your interests..."
+                    ></textarea>
+
+                    <small>Maximum 500 characters.</small>
+                </div>
+
+                <div class="profile-field full-width">
+                    <label for="profileSkills">Skills</label>
+
+                    <input
+                        type="text"
+                        id="profileSkills"
+                        maxlength="300"
+                        placeholder="C++, React, JavaScript, DSA, AI/ML"
+                    >
+
+                    <small>Separate each skill with a comma.</small>
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileGithub">GitHub URL</label>
+                    <input
+                        type="url"
+                        id="profileGithub"
+                        placeholder="https://github.com/username"
+                    >
+                </div>
+
+                <div class="profile-field">
+                    <label for="profileLinkedin">LinkedIn URL</label>
+                    <input
+                        type="url"
+                        id="profileLinkedin"
+                        placeholder="https://linkedin.com/in/username"
+                    >
+                </div>
+
+                <div class="profile-field full-width">
+                    <label for="profilePortfolio">Portfolio URL</label>
+                    <input
+                        type="url"
+                        id="profilePortfolio"
+                        placeholder="https://yourportfolio.com"
+                    >
+                </div>
+
+            </div>
+
+            <div class="profile-editor-actions">
+
+                <button
+                    type="button"
+                    class="profile-cancel-btn"
+                    id="cancelProfileEditor"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="profile-save-btn"
+                >
+                    <i class="fa-solid fa-check"></i>
+                    Save Profile
+                </button>
+
+            </div>
+
+            <p
+                class="profile-save-message"
+                id="profileSaveMessage"
+                role="status"
+                aria-live="polite"
+            ></p>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast">
+
+    ✓
+    <span>
+        Done
+    </span>
+
+</div>
+
+
+<!-- =====================================================
+     CREATE PROJECT MODAL
+===================================================== -->
+
+<div class="modal-bg" id="createProjectModal">
+    <div class="modal">
+        <button class="close" id="closeCreateProjectModal">×</button>
+        <small>LAUNCH PROJECT</small>
+        <h2>Create New Project</h2>
+        <p>Showcase your project to students, find collaborators, and gather feedback.</p>
+
+        <form id="newProjectForm" class="modal-form">
+            <div class="modal-field">
+                <label for="newProjectTitle">Project Title *</label>
+                <input type="text" id="newProjectTitle" placeholder="e.g. Campus Navigation Assistant" required>
+            </div>
+
+            <div class="modal-field">
+                <label for="newProjectCategory">Category *</label>
+                <select id="newProjectCategory" required>
+                    <option value="web">Web Development</option>
+                    <option value="ai">AI / Machine Learning</option>
+                    <option value="hardware">Hardware & IoT</option>
+                    <option value="social">Social Impact</option>
+                </select>
+            </div>
+
+            <div class="modal-field">
+                <label for="newProjectDescription">Description *</label>
+                <textarea id="newProjectDescription" rows="3" placeholder="Explain what problem your project solves..." required></textarea>
+            </div>
+
+            <div class="modal-field">
+                <label for="newProjectTags">Tech Stack (comma-separated)</label>
+                <input type="text" id="newProjectTags" placeholder="React, Node.js, MongoDB">
+            </div>
+
+            <div class="modal-buttons">
+                <button type="submit" class="primary-btn">Publish Project 🚀</button>
+                <button type="button" class="secondary-btn" id="cancelCreateProject">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- =====================================================
+     FIND A MENTOR MODAL
+===================================================== -->
+
+<div class="modal-bg" id="mentorModal">
+    <div class="modal large-modal">
+        <button class="close" id="closeMentorModal">×</button>
+        <small>GUIDANCE & MENTORSHIP</small>
+        <h2>Connect with Mentors</h2>
+        <p>Get 1-on-1 advice from experienced student researchers, senior developers, and alumni.</p>
+
+        <div class="mentor-list">
+            <div class="mentor-item">
+                <div class="mentor-avatar">SP</div>
+                <div class="mentor-info">
+                    <h4>Suman Panda</h4>
+                    <p class="mentor-role">Senior ML Researcher · VSSUT '24</p>
+                    <div class="tags">
+                        <span>PyTorch</span>
+                        <span>NLP</span>
+                        <span>Computer Vision</span>
+                    </div>
+                </div>
+                <button class="primary-btn-sm mentor-request-btn" data-mentor="Suman Panda">Request Mentorship</button>
+            </div>
+
+            <div class="mentor-item">
+                <div class="mentor-avatar purple">RV</div>
+                <div class="mentor-info">
+                    <h4>Rajesh Verma</h4>
+                    <p class="mentor-role">Full-Stack Lead · GSoC Contributor</p>
+                    <div class="tags">
+                        <span>React</span>
+                        <span>Distributed Systems</span>
+                        <span>Docker</span>
+                    </div>
+                </div>
+                <button class="primary-btn-sm mentor-request-btn" data-mentor="Rajesh Verma">Request Mentorship</button>
+            </div>
+
+            <div class="mentor-item">
+                <div class="mentor-avatar orange">SM</div>
+                <div class="mentor-info">
+                    <h4>Sneha Mohapatra</h4>
+                    <p class="mentor-role">IoT & Embedded Systems Mentor · IIT-KGP</p>
+                    <div class="tags">
+                        <span>ESP32</span>
+                        <span>Robotics</span>
+                        <span>Firmware</span>
+                    </div>
+                </div>
+                <button class="primary-btn-sm mentor-request-btn" data-mentor="Sneha Mohapatra">Request Mentorship</button>
+            </div>
+        </div>
+
+        <div class="modal-footer-action">
+            <a href="members.html" class="outline-btn full-btn" style="display:block; text-align:center; padding: 12px; margin-top: 15px;">Explore All Community Members →</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- =====================================================
+     SPONSORSHIP MODAL
+===================================================== -->
+
+<div class="modal-bg" id="sponsorModal">
+    <div class="modal">
+        <button class="close" id="closeSponsorModal">×</button>
+        <small>PROJECT FUNDING</small>
+        <h2>Apply for Project Sponsorship</h2>
+        <p>Pitch your student project to get sponsored by companies, labs, and incubators.</p>
+
+        <form id="sponsorForm" class="modal-form">
+            <div class="modal-field">
+                <label for="sponsorProjectName">Project Name *</label>
+                <input type="text" id="sponsorProjectName" placeholder="e.g. Smart Campus Safety Device" required>
+            </div>
+
+            <div class="modal-field">
+                <label for="sponsorType">Funding / Support Type *</label>
+                <select id="sponsorType" required>
+                    <option value="hardware">Hardware Components & Sensors</option>
+                    <option value="cloud">Cloud Credits (AWS / GCP / Azure)</option>
+                    <option value="cash">Direct Grant Funding</option>
+                    <option value="mentorship">Technical Mentorship & Incubation</option>
+                </select>
+            </div>
+
+            <div class="modal-field">
+                <label for="sponsorAmount">Estimated Amount / Value Needed *</label>
+                <input type="text" id="sponsorAmount" placeholder="e.g. ₹15,000 or $500 Cloud Credits" required>
+            </div>
+
+            <div class="modal-field">
+                <label for="sponsorPitch">Why should this project be sponsored? *</label>
+                <textarea id="sponsorPitch" rows="3" placeholder="Briefly describe your goals and how support will help..." required></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button type="submit" class="primary-btn">Submit Application ✦</button>
+                <button type="button" class="secondary-btn" id="cancelSponsorModal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- =====================================================
+     HACKATHON DETAILS MODAL
+===================================================== -->
+
+<div class="modal-bg" id="hackathonDetailModal">
+    <div class="modal">
+        <button class="close" id="closeHackathonModal">×</button>
+        <small id="hackathonModalTag">HACKATHON EVENT</small>
+        <h2 id="hackathonModalTitle">AWS Student Hackathon</h2>
+        <p id="hackathonModalDesc">Build innovative cloud-native student applications powered by serverless and generative AI technologies.</p>
+
+        <div class="event-details-box">
+            <div class="event-detail-row">
+                <span>📅 <strong>Date:</strong></span>
+                <span id="hackathonModalDate">28 SEP, 2026</span>
+            </div>
+            <div class="event-detail-row">
+                <span>📍 <strong>Location / Mode:</strong></span>
+                <span id="hackathonModalLocation">Online (Global)</span>
+            </div>
+            <div class="event-detail-row">
+                <span>👥 <strong>Team Size:</strong></span>
+                <span id="hackathonModalTeam">1 - 4 Members</span>
+            </div>
+            <div class="event-detail-row">
+                <span>🏆 <strong>Prizes:</strong></span>
+                <span id="hackathonModalPrize">₹50,000 + AWS Credits</span>
+            </div>
+        </div>
+
+        <div class="modal-buttons">
+            <a href="hackathons.html" class="primary-btn" id="hackathonRegisterLink" style="text-align: center; text-decoration: none;">View Event Page ↗</a>
+            <button type="button" class="secondary-btn" id="hackathonSaveBtn">☆ Save Event</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- =====================================================
+     COLLABORATE MODAL
+===================================================== -->
+
+<div class="modal-bg" id="collaborateModal">
+    <div class="modal">
+        <button class="close" id="closeCollaborateModal">×</button>
+        <small>TEAM COLLABORATION</small>
+        <h2>Join Project Team</h2>
+        <p id="collaborateProjectPrompt">Send a collaboration request to contribute to this project.</p>
+
+        <form id="collaborateForm" class="modal-form">
+            <div class="modal-field">
+                <label for="collabRole">Your Preferred Role *</label>
+                <select id="collabRole" required>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Backend Developer">Backend Developer</option>
+                    <option value="AI / ML Engineer">AI / Machine Learning Engineer</option>
+                    <option value="UI/UX Designer">UI / UX Designer</option>
+                    <option value="IoT / Hardware Developer">IoT / Hardware Developer</option>
+                    <option value="Research & Documentation">Research & Documentation</option>
+                </select>
+            </div>
+
+            <div class="modal-field">
+                <label for="collabMessage">Why are you interested in this project? *</label>
+                <textarea id="collabMessage" rows="3" placeholder="Describe your relevant skills or experience..." required></textarea>
+            </div>
+
+            <div class="modal-buttons">
+                <button type="submit" class="primary-btn">Send Request 🤝</button>
+                <button type="button" class="secondary-btn" id="cancelCollaborateModal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
